@@ -95,7 +95,6 @@ public class Explorer {
 			System.out.println("\n隊長：");
 			System.out.println(i + "時間経過。");
 
-			// 3時間目でまだ通っていない場合は強制通過
 			if (i == 3 && goTime == 0) {
 				System.out.println("もう後がないんで通り抜けますよ。");
 				goTime = i;
@@ -118,6 +117,7 @@ public class Explorer {
 		} else {
 			System.out.println("\n隊長：");
 			System.out.println("しまったトラがまだ起きてた！");
+
 		}
 
 	}
