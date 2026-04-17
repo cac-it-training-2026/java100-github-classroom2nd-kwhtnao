@@ -91,9 +91,25 @@ public class Explorer {
 
 		//ここにfor文、if文を利用した処理を記述
 
-		for (int i = 0; i < args.length; i++) {
-			String string = args[i];
+		for (int i = 1; i <= 3; i++) {
+			System.out.println("\n隊長：");
+			System.out.println(i + "時間経過。");
 
+			// 3時間目でまだ通っていない場合は強制通過
+			if (i == 3 && goTime == 0) {
+				System.out.println("もう後がないんで通り抜けますよ。");
+				goTime = i;
+				break;
+			}
+
+			System.out.print("今通り抜けますか？（はい… 1 : いいえ… その他のキー）＞");
+
+			String input = br.readLine();
+
+			if (input.equals("1")) {
+				goTime = i;
+				break;
+			}
 		}
 
 		if (deepSleepTime == goTime) {
