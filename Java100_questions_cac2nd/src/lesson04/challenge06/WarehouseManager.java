@@ -56,7 +56,7 @@ public class WarehouseManager {
 			}
 		}
 		System.out.println("\nです。\n");
-
+e
 
 		//ここに値の入れ替え処理を記述する
 
