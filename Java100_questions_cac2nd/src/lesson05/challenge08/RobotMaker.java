@@ -96,6 +96,23 @@ class Robot {
 	}
 
 	String makeEggDishes(int flourNum, int sugarNum, int eggNum, int butterNum) {
+		int flour = flourNum - 170;
+		int sugar = sugarNum - 50;
+		int egg = eggNum - 1;
+		int butter = butterNum - 80;
+
+		String menu = null;
+		if ((flour >= 0) && (sugar >= 0) && (egg >= -1) && (butter >= 0)) {
+			menu = "クッキー";
+		} else if ((egg >= 0) && (butter >= -75)) {
+			menu = "オムレツ";
+
+		} else if (egg >= -1) {
+			menu = "ゆで卵";
+		} else {
+			menu = null;
+		}
+		return menu;
 
 	}
 
@@ -146,6 +163,15 @@ public class RobotMaker {
 		//（インスタンス名はrobot）
 		//makeEggDishesを実行する。
 		//標準出力でメニューを表示する。
+		Robot robot = new Robot();
+		String menu = robot
+				.makeEggDishes(flourNum, sugarNum, eggNum, butterNum);
+		if (menu != null) {
+			System.out.println("\n" + menu + "が出来ました。");
+		} else {
+			System.out.println("\n何も作れません。\n");
+		}
+
 	}
 
 }
