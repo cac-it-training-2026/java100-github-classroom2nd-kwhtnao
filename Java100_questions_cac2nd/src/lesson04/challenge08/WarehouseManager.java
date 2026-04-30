@@ -56,9 +56,51 @@ public class WarehouseManager {
 
 
 		//ここに重複チェックおよび値の代入処理を記述する①(1～5)
+		int inputNum = 0 ;
+		boolean loopFlag = false;
+		for (int i = 0; i < ABKosanArray1.length; i++) {
+			do {
+				loopFlag = false;
+			    inputNum = (int)( Math.random () * 10 ) % 5 + 1;
+			    
+			    for( int j = 0; j < ABKosanArray1.length; j++) {
+			    	if (ABKosanArray1[j] == inputNum) {
+			    		loopFlag = true;
+			    		break;
+			    	}
+			  
+			    } while (loopFlag);
+			}
+			    
+			    ABKosanArray1 [1] = inputNum;
+			    
+		}
 
 
 		//ここに重複チェックおよび値の代入処理を記述する②(6～10)
+			inputNum = 0;
+			loopFlag = false;
+			for (int i = 0; i < ABKosanArray2.length; i++) {
+				do {
+					loopFlag = false;
+					if (inputNum > 5) {
+						for(int j = 0; j < ABKosanArray2.length; j++) {
+							if (ABKosanArray2[j] == inputNum) {
+								loopFlag = false;
+								break;
+							}
+							
+						}
+								
+					} else {
+						loopFlag = true;
+						
+					} 
+					} while(loopFlag);
+				ABKosanArray2[i] = inputNum;
+				}
+
+			
 
 
 		System.out.println("E主任：");
